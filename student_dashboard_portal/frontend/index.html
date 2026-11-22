@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard Portal</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">S</span><span>Student<span class="brand-light">Hub</span></span></div>
+    <p class="nav-label">MENU</p>
+    <a class="nav-link active" href="#overview">▦ <span>Overview</span></a>
+    <a class="nav-link" href="#tasks">✓ <span>My Tasks</span></a>
+    <a class="nav-link" href="#announcements">▤ <span>Announcements</span></a>
+    <div class="sidebar-bottom"><div class="avatar">AJ</div><div><strong>Alex Johnson</strong><small>Student account</small></div></div>
+  </aside>
+
+  <main class="main" id="overview">
+    <header class="topbar">
+      <div><p class="eyebrow">STUDENT PORTAL</p><h1>Dashboard</h1></div>
+      <div class="top-actions"><span class="today" id="today"></span><div class="avatar">AJ</div></div>
+    </header>
+
+    <section class="welcome">
+      <div><p class="eyebrow light">YOUR ACADEMIC SPACE</p><h2>Welcome back, Alex! 👋</h2><p>Here’s your academic progress at a glance.</p></div>
+      <div class="welcome-symbol">✦</div>
+    </section>
+
+    <section class="stats-grid" aria-label="Student statistics">
+      <article class="stat-card"><div class="stat-top"><span>Attendance</span><span class="stat-icon blue">◷</span></div><strong id="attendance">—</strong><small>Overall attendance</small><div class="progress"><span id="attendance-bar"></span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>Current CGPA</span><span class="stat-icon purple">★</span></div><strong id="cgpa">—</strong><small>Academic performance</small><div class="mini-note">Keep up the good work</div></article>
+      <article class="stat-card"><div class="stat-top"><span>Pending tasks</span><span class="stat-icon orange">◷</span></div><strong id="pending-count">—</strong><small>Tasks to complete</small><div class="mini-note">Stay on track</div></article>
+      <article class="stat-card"><div class="stat-top"><span>Completed tasks</span><span class="stat-icon green">✓</span></div><strong id="completed-count">—</strong><small>Tasks finished</small><div class="mini-note">Great progress</div></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel tasks-panel" id="tasks">
+        <div class="panel-heading"><div><p class="eyebrow">STAY ORGANIZED</p><h3>My tasks</h3></div><span class="pill" id="task-total">0 tasks</span></div>
+        <form id="task-form" class="task-form"><input id="task-title" type="text" placeholder="Add a new task..." required><input id="task-date" type="date" required><button type="submit">+ Add task</button></form>
+        <p class="feedback" id="task-feedback" role="status"></p>
+        <div id="task-list" class="task-list"><p class="muted">Loading tasks...</p></div>
+      </article>
+
+      <article class="panel announcements-panel" id="announcements">
+        <div class="panel-heading"><div><p class="eyebrow">CAMPUS UPDATES</p><h3>Announcements</h3></div><span class="notice-icon">♧</span></div>
+        <div id="announcement-list"><p class="muted">Loading announcements...</p></div>
+      </article>
+    </section>
+
+    <section class="profile-strip">
+      <div><p class="eyebrow">STUDENT PROFILE</p><h3 id="student-name">Alex Johnson</h3><p id="student-course">Computer Science Engineering · 3rd Year</p></div>
+      <div class="profile-detail"><small>Register number</small><strong id="register-number">—</strong></div>
+      <div class="profile-detail"><small>Portal status</small><strong><span class="status-dot"></span> Active</strong></div>
+    </section>
+    <footer>StudentHub · Student Dashboard Portal</footer>
+  </main>
+</body>
+</html>
